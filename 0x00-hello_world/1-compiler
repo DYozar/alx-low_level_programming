@@ -1,3 +1,2 @@
 #!/bin/bash
-gcc -c $cfile -o $ofile
 gcc -C $cfile -o $ofile
