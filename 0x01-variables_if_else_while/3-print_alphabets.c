@@ -3,6 +3,7 @@
  * main - function
  * Return: should be 0
 */
+
 int main(void)
 {
 	char c = 'a';
@@ -20,4 +21,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
