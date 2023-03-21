@@ -6,7 +6,7 @@
  * Return: should be 1 if c is a letter or 0 if otherwise
  */
 
-int _islower(int c)
+int _isalpha(int c);
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
