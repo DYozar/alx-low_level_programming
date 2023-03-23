@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_times_table - prints the multiplication table for a given number
  * @n: the number to print the multiplication table for
