@@ -22,8 +22,8 @@ void print_times_table(int n)
 				_putchar('0');
 			else if (i * j < 10)
 			{
+				printf("0" + i * j);
 				printf(",   ");
-				_putchar('0' + i * j);
 			}
 			else if (i * j < 100)
 			{
