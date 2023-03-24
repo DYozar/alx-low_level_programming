@@ -5,22 +5,20 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c;
-	int fibonacci[50] = {a, b};
+	int c;
+	long int n1, n2, fn;
 
-	for (int i = 2; i < 50; i++)
+	n1 = 1;
+	n2 = 2;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 48; c++)
 	{
-		c = a + b;
-		fibonacci[i] = c;
-		a = b;
-		b = c;
+		fn = n1 + n2;
+		printf(", %ld", fn);
+		n1 = n2;
+		n2 = fn;
 	}
-
-	for (int i = 0; i < 49; i++)
-	{
-		printf("%d, ", fibonacci[i]);
-	}
-	printf("%d\n", fibonacci[49]);
-
+	printf("\n");
 	return (0);
+
 }
