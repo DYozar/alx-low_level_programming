@@ -8,29 +8,29 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1;
-    int result = 0;
-    int i = 0;
+	int sign = 1;
+	int result = 0;
+	int i = 0;
 /* Skip all non-digit characters at the beginning of the string */
-    while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
-    {
+	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+	{
 /* Check for sign characters */
-        if (s[i] == '-')
-            sign *= -1;
-         i++;
-    }
+	if (s[i] == '-')
+		sign *= -1;
+	i++;
+	}
 
-/* Read all digit characters until the end of the string or a non-digit character */
-    while (s[i] != '\0' && s[i] >= '0' && s[i] <= '9')
-    {
+/* Read all digit char until the end of the string or a non-digit character */
+	while (s[i] != '\0' && s[i] >= '0' && s[i] <= '9')
+	{
 /* Add the digit to the result, making sure to handle overflow */
-        result = result * 10 + (s[i] - '0');
+		result = result * 10 + (s[i] - '0');
 
 /* Move to the next digit */
-        i++;
-    }
+		i++;
+	}
 
 /* Apply the sign and return the result */
-    return sign * result;
+	return sign * result;
 }
 
