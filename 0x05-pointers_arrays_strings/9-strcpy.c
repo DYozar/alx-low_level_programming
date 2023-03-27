@@ -8,16 +8,17 @@
  */
 int main(void)
 {
-	char s1[98];
-	char *ptr;
+	int i;
 
-/* Copy source string to destination buffer using _strcpy function */
-	ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+/* Iterate over source string and copy each character to destination */
+	for (i = 0; src[i] != '\0'; i++)
+	{
+	    dest[i] = src[i];
+	}
 
-/* Print destination buffer and pointer to destination buffer */
-	printf("%s", s1);
-	printf("%s", ptr);
+/* Copy the terminating null byte to destination */
+	dest[i] = '\0';
 
-    return (0);
+	return (dest);
 }
 
