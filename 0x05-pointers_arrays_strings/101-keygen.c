@@ -8,19 +8,25 @@ int main(void)
 {
 	char password[PASSWORD_LENGTH + 1];
 
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int i, sum, n;
 
-	int i;
+	sum = 0;
 
 	srand(time(NULL));
 	
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
-		password[i] = charset[rand() % sizeof(charset)];
+		password[i] = rand() % 78;
+		sum += (password[i] + '0');
+		putchar(password[i] + '0');
+		if ((2772 -sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-
-	password[PASSWORD_LENGTH] = '\0';
-	printf("%s", password);
 
 	return 0;
 }
