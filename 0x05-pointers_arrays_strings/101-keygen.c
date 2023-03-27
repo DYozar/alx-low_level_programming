@@ -2,25 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
+#define PASSWORD_LENGTH 1000
 
 int main(void)
 {
-char password[PASSWORD_LENGTH + 1];
+	char password[PASSWORD_LENGTH + 1];
 
-const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-int i;
+	int i;
 
-srand(time(NULL));
+	srand(time(NULL));
 	
-for (i = 0; i < PASSWORD_LENGTH; i++)
-{
-password[i] = charset[rand() % sizeof(charset)];
-}
+	for (i = 0; i < PASSWORD_LENGTH; i++)
+	{
+		password[i] = charset[rand() % sizeof(charset)];
+	}
 
-password[PASSWORD_LENGTH] = '\0';
-printf("%s", password);
+	password[PASSWORD_LENGTH] = '\0';
+	printf("%s", password);
 
-return 0;
+	return 0;
 }
