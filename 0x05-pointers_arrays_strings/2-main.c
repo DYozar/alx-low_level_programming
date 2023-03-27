@@ -1,14 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * swap_int - updates the value of an integer to 98
- * @n: pointer to an integer
- * @b: pointer to an integers
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-void swap_int(int *a, int *b)
+int main(void)
 {
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
+	char *str;
+	int len;
 
+	str = "My first strlen!";
+	len = _strlen(str);
+	printf("%d\n", len);
+	return (0);
+}
