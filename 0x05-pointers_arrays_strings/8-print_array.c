@@ -12,11 +12,14 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)/* Loop through each element of the array.*/
 	{
-		printf("%d", a[i]);/*Print the current element.*/
 
 		if (i != n - 1)/* If it's not the last element, print a comma and space.*/
 		{
-			printf(", ");
+			printf("%d, ", a[i]);/*Print the current element.*/
+		}
+		else
+		{
+			printf("%d", a[i]);/*Print the current element.*/
 		}
 	}
 
