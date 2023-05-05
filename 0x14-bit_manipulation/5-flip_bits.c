@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * flip_bits - returns the number of bits you would need to flip to get from one number to another
+ * flip_bits - returns the number of bits
  * @n: first number
  * @m: second number
  *
@@ -17,6 +17,6 @@ num_bits += xor_result & 1;
 xor_result >>= 1;
 }
 
-return num_bits;
+return (num_bits);
 }
 
